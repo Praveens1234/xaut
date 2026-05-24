@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/yourusername/xaut/actions">
-    <img src="https://github.com/yourusername/xaut/workflows/XAUT%20-%20Flutter%20CI%2FCD/badge.svg" alt="CI/CD"/>
+  <a href="https://github.com/Praveens1234/xaut/actions">
+    <img src="https://github.com/Praveens1234/xaut/workflows/XAUT%20-%20Flutter%20CI%2FCD/badge.svg" alt="CI/CD"/>
   </a>
   <img src="https://img.shields.io/badge/Flutter-3.22.0-blue?logo=flutter" alt="Flutter"/>
   <img src="https://img.shields.io/badge/Platform-Android-green?logo=android" alt="Android"/>
