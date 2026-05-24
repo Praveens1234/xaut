@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">XAUT</string>
+    <string name="widget_description">Live XAUUSD Gold Price Widget</string>
+    <string name="notification_channel_price">Live Gold Price</string>
+    <string name="notification_channel_alerts">Price Alerts</string>
+    <string name="notification_channel_alarm">Gold Price Alarm</string>
+    <string name="foreground_service_title">XAUT Running</string>
+    <string name="foreground_service_text">Monitoring live gold prices</string>
+</resources>
