@@ -15,12 +15,14 @@
         <item name="android:windowLightStatusBar">false</item>
     </style>
 
+    <!--
+        AlarmTheme: windowKeepScreenOn/ShowWhenLocked/TurnScreenOn are set
+        programmatically in AlarmActivity.kt (API 27+) to avoid requiring
+        compileSdk 35. This style only handles visual appearance.
+    -->
     <style name="AlarmTheme" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen">
         <item name="android:windowBackground">@android:color/black</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/black</item>
-        <item name="android:windowKeepScreenOn">true</item>
-        <item name="android:windowShowWhenLocked">true</item>
-        <item name="android:windowTurnScreenOn">true</item>
     </style>
 </resources>
