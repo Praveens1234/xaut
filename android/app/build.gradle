@@ -12,8 +12,6 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
-        // Disable core library desugaring — minSdk 24 doesn't need it
-        // and the desugar_jdk_libs AAR metadata causes conflicts with AGP 8.3.2
     }
 
     kotlinOptions {
