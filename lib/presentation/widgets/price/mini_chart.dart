@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../core/theme/app_theme.dart';
-import '../../../core/utils/format_utils.dart';
 import '../../../data/models/price_model.dart';
 
 class MiniChart extends StatelessWidget {
@@ -102,16 +101,23 @@ class MiniChart extends StatelessWidget {
           ),
         ),
         borderData: FlBorderData(show: false),
-        titlesData: const FlTitlesData(
-          rightTitles: AxisTitles(
-            sideTitles: SideTitles(),
+        titlesData: FlTitlesData(
+          leftTitles: AxisTitles(
+            sideTitles: SideTitles(
+              showTitles: true,
+              reservedSize: 56,
+              getTitlesWidget: (double value, TitleMeta meta) => Text(
+                value.toStringAsFixed(2),
+                style: GoogleFonts.spaceMono(
+                  fontSize: 9,
+                  color: const Color(0xFF5A5A7A),
+                ),
+              ),
+            ),
           ),
-          topTitles: AxisTitles(
-            sideTitles: SideTitles(),
-          ),
-          bottomTitles: AxisTitles(
-            sideTitles: SideTitles(),
-          ),
+          rightTitles: const AxisTitles(),
+          topTitles: const AxisTitles(),
+          bottomTitles: const AxisTitles(),
         ),
         lineBarsData: <LineChartBarData>[
           LineChartBarData(
