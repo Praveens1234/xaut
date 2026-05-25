@@ -60,7 +60,7 @@ Future<void> main() async {
   setupDependencies();
 
   // Workmanager background sync
-  await Workmanager().initialize(callbackDispatcher, isInDebugMode: false);
+  await Workmanager().initialize(callbackDispatcher);
   await Workmanager().registerPeriodicTask(
     'xaut_price_sync',
     'priceSyncTask',

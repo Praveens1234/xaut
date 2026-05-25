@@ -6,7 +6,6 @@ import android.app.NotificationManager
 import android.graphics.Color
 import android.os.Build
 import androidx.work.Configuration
-import androidx.work.WorkManager
 
 class XautApplication : Application(), Configuration.Provider {
 

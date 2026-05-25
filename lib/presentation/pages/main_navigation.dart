@@ -19,9 +19,9 @@ class _MainNavigationState extends State<MainNavigation> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = const [
-    const HomePage(),
-    const AlertsPage(),
-    const SettingsPage(),
+    HomePage(),
+    AlertsPage(),
+    SettingsPage(),
   ];
 
   @override
@@ -41,7 +41,7 @@ class _MainNavigationState extends State<MainNavigation> {
           (prev is PriceLoaded) != (curr is PriceLoaded),
       builder: (context, state) {
         return Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             border: Border(
               top: BorderSide(
                 color: AppTheme.darkBorder,

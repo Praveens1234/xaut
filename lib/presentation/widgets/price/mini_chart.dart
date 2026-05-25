@@ -102,28 +102,15 @@ class MiniChart extends StatelessWidget {
           ),
         ),
         borderData: FlBorderData(show: false),
-        titlesData: FlTitlesData(
-          leftTitles: AxisTitles(
-            sideTitles: SideTitles(
-              showTitles: true,
-              reservedSize: 56,
-              getTitlesWidget: (double value, TitleMeta meta) => Text(
-                FormatUtils.formatPrice(value),
-                style: GoogleFonts.spaceMono(
-                  fontSize: 9,
-                  color: const Color(0xFF5A5A7A),
-                ),
-              ),
-            ),
+        titlesData: const FlTitlesData(
+          rightTitles: AxisTitles(
+            sideTitles: SideTitles(),
           ),
-          rightTitles: const AxisTitles(
-            sideTitles: SideTitles(showTitles: false),
+          topTitles: AxisTitles(
+            sideTitles: SideTitles(),
           ),
-          topTitles: const AxisTitles(
-            sideTitles: SideTitles(showTitles: false),
-          ),
-          bottomTitles: const AxisTitles(
-            sideTitles: SideTitles(showTitles: false),
+          bottomTitles: AxisTitles(
+            sideTitles: SideTitles(),
           ),
         ),
         lineBarsData: <LineChartBarData>[
@@ -132,13 +119,10 @@ class MiniChart extends StatelessWidget {
             isCurved: true,
             curveSmoothness: 0.3,
             color: lineColor,
-            barWidth: 2,
             dotData: const FlDotData(show: false),
             belowBarData: BarAreaData(
               show: true,
               gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
                 colors: <Color>[
                   lineColor.withAlpha(38),
                   lineColor.withAlpha(0),
@@ -150,8 +134,8 @@ class MiniChart extends StatelessWidget {
         lineTouchData: LineTouchData(
           touchTooltipData: LineTouchTooltipData(
             getTooltipColor: (_) => AppTheme.darkCardElevated,
-            getTooltipItems: (List<LineBarSpot> spots) =>
-                spots.map((LineBarSpot s) {
+            getTooltipItems: (List<LineBarSpot> barSpots) =>
+                barSpots.map((LineBarSpot s) {
               return LineTooltipItem(
                 '\$${s.y.toStringAsFixed(2)}',
                 GoogleFonts.spaceMono(
@@ -164,7 +148,6 @@ class MiniChart extends StatelessWidget {
           ),
         ),
       ),
-      duration: const Duration(milliseconds: 150),
     );
   }
 }

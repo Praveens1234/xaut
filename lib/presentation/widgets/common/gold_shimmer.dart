@@ -12,12 +12,12 @@ class GoldShimmer extends StatelessWidget {
       baseColor: AppTheme.darkCard,
       highlightColor: AppTheme.darkCardElevated,
       period: const Duration(milliseconds: 1200),
-      child: Column(
+      child: const Column(
         children: <Widget>[
-          const _ShimmerBox(height: 180, radius: 20),
-          const SizedBox(height: 12),
+          _ShimmerBox(height: 180, radius: 20),
+          SizedBox(height: 12),
           Row(
-            children: const <Widget>[
+            children: <Widget>[
               Expanded(child: _ShimmerBox(height: 72, radius: 14)),
               SizedBox(width: 8),
               _ShimmerBox(width: 68, height: 72, radius: 14),
@@ -25,10 +25,10 @@ class GoldShimmer extends StatelessWidget {
               Expanded(child: _ShimmerBox(height: 72, radius: 14)),
             ],
           ),
-          const SizedBox(height: 12),
-          const _ShimmerBox(height: 60, radius: 14),
-          const SizedBox(height: 16),
-          const _ShimmerBox(height: 180, radius: 16),
+          SizedBox(height: 12),
+          _ShimmerBox(height: 60, radius: 14),
+          SizedBox(height: 16),
+          _ShimmerBox(height: 180, radius: 16),
         ],
       ),
     );

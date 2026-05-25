@@ -145,7 +145,7 @@ class AppTheme {
 
       chipTheme: ChipThemeData(
         backgroundColor: darkCardElevated,
-        selectedColor: Color.fromRGBO(255, 215, 0, 0.2),
+        selectedColor: const Color.fromRGBO(255, 215, 0, 0.2),
         side: const BorderSide(color: darkBorder),
         labelStyle: GoogleFonts.dmSans(
           fontSize: 12,
@@ -216,7 +216,7 @@ class AppTheme {
         trackColor: WidgetStateProperty.resolveWith(
           (Set<WidgetState> states) {
             if (states.contains(WidgetState.selected)) {
-              return Color.fromRGBO(255, 215, 0, 0.3);
+              return const Color.fromRGBO(255, 215, 0, 0.3);
             }
             return darkCardElevated;
           },
@@ -230,7 +230,7 @@ class AppTheme {
 
       navigationBarTheme: NavigationBarThemeData(
         backgroundColor: darkSurface,
-        indicatorColor: Color.fromRGBO(255, 215, 0, 0.2),
+        indicatorColor: const Color.fromRGBO(255, 215, 0, 0.2),
         iconTheme: const WidgetStatePropertyAll<IconThemeData>(
           IconThemeData(size: 22),
         ),
